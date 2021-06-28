@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="10dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <ImageButton
+        android:src="@drawable/noimg"
+        android:scaleType="fitXY"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btnDelete"
+        android:layout_width="48dp"
+        android:layout_height="37dp"
+        android:layout_alignParentRight="true" />
+
+    <ImageButton
+        android:id="@+id/btnUpdate"
+        android:layout_width="48dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="62dp"
+        android:layout_marginRight="62dp"
+        android:layout_toLeftOf="@+id/btnDelete"
+        android:scaleType="fitXY"
+        android:src="@drawable/noimg" />
+
     <ImageView
         android:id="@+id/imgProfile"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_margin="10dp"
         android:src="@drawable/noimg" />
 

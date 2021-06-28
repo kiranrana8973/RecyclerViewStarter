@@ -54,6 +54,7 @@ class EmployeeAdapter(
         holder.imageProfile.setOnClickListener {
             val intent = Intent(context, ProfileActivity::class.java)
             intent.putExtra("employee",employee)
+
             context.startActivity(intent)
         }
 

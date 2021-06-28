@@ -2,6 +2,7 @@ package com.example.recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -10,7 +11,7 @@ import com.example.recyclerview.model.Employee
 
 class ProfileActivity : AppCompatActivity() {
     private lateinit var imgProfile : ImageView
-    private lateinit var tvName : TextView
+    private lateinit var tvName : EditText
     private lateinit var tvSalary : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,7 @@ class ProfileActivity : AppCompatActivity() {
         // Retrieve the value passed from MainActivity
         val intent = intent.getParcelableExtra<Employee>("employee")
         if(intent!=null){
-            tvName.text = intent.name
+            tvName.setText(intent.name)
             tvSalary.text = intent.salary.toString()
             Glide.with(this)
                 .load(intent.imageUrl)

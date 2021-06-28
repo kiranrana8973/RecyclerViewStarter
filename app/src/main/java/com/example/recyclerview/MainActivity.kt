@@ -21,8 +21,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
         populateEmployee()
 
-        val adapter = EmployeeAdapter(lstEmployee,this)
-        recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
+        val adapter = EmployeeAdapter(lstEmployee, this)
+        recyclerView.layoutManager =
+            LinearLayoutManager(this@MainActivity)
         recyclerView.adapter = adapter
 
 
