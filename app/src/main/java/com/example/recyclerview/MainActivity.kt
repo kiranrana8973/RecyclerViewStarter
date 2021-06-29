@@ -10,7 +10,10 @@ import com.example.recyclerview.model.Employee
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var lstEmployee: ArrayList<Employee>
+    companion object{
+        var lstEmployee: ArrayList<Employee> = ArrayList<Employee>()
+    }
+
     private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager =
             LinearLayoutManager(this@MainActivity)
         recyclerView.adapter = adapter
-
 
     }
 
